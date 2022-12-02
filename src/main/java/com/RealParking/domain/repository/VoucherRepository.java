@@ -14,6 +14,6 @@ public interface VoucherRepository {
     Optional<VoucherDTO> getVoucher(int voucherId);
     VoucherDTO save (VoucherDTO voucher);
     VoucherDTO update(VoucherDTO voucher);
-    Boolean delete(int voucherId);
+    void delete(int voucherId);
 
 }

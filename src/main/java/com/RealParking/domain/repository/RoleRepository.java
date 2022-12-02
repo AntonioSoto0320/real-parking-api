@@ -14,6 +14,6 @@ public interface RoleRepository {
     Optional<RoleDTO> getRole(int roleId);
     RoleDTO save (RoleDTO role);
     RoleDTO update(RoleDTO role);
-    Boolean delete(int roleId);
+    void delete(int roleId);
 
 }

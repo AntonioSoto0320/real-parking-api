@@ -11,18 +11,18 @@ public class UserDTO {
     private String password;
     private String fullName;
     private String stateUser;
-    private Role rol;
+    private Role role;
     private Blob photo;
 
     public UserDTO() {
     }
 
-    public UserDTO(String user, String password, String fullName, String stateUser, Role rol, Blob photo) {
+    public UserDTO(String user, String password, String fullName, String stateUser, Role role, Blob photo) {
         this.user = user;
         this.password = password;
         this.fullName = fullName;
         this.stateUser = stateUser;
-        this.rol = rol;
+        this.role = role;
         this.photo = photo;
     }
 
@@ -66,12 +66,12 @@ public class UserDTO {
         this.stateUser = stateUser;
     }
 
-    public Role getRol() {
-        return rol;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRol(Role rol) {
-        this.rol = rol;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public Blob getPhoto() {
@@ -84,13 +84,13 @@ public class UserDTO {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "UserDTO{" +
                 "idUser=" + idUser +
                 ", user='" + user + '\'' +
                 ", password='" + password + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", stateUser='" + stateUser + '\'' +
-                ", rol=" + rol +
+                ", role=" + role +
                 ", photo=" + photo +
                 '}';
     }

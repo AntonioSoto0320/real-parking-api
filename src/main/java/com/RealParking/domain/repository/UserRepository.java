@@ -14,6 +14,6 @@ public interface UserRepository {
     Optional<UserDTO> getUser(int userId);
     UserDTO save (UserDTO user);
     UserDTO update(UserDTO user);
-    Boolean delete(int userId);
+    void delete(int userId);
 
 }

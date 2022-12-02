@@ -35,8 +35,8 @@ public class VoucherService {
         return voucherService.update(voucher);
     }
 
-    public Boolean delete(int voucherId){
-        return voucherService.delete(voucherId);
+    public void delete(int voucherId){
+         voucherService.delete(voucherId);
     }
 
 

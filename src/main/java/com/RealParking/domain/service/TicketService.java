@@ -36,8 +36,8 @@ public class TicketService {
         return ticketRepository.update(ticket);
     }
 
-    public Boolean delete(int ticketId){
-        return ticketRepository.delete(ticketId);
+    public void delete(int ticketId){
+         ticketRepository.delete(ticketId);
     }
 
 }

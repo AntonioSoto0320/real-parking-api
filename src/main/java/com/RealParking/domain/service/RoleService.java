@@ -36,7 +36,7 @@ public class RoleService {
         return roleService.update(role);
     }
 
-    public Boolean delete(int roleId){
-        return roleService.delete(roleId);
+    public void delete(int roleId){
+         roleService.delete(roleId);
     }
 }

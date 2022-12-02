@@ -14,6 +14,6 @@ public interface TicketRepository {
     Optional<TicketDTO> getTicket(int ticketId);
     TicketDTO save (TicketDTO ticket);
     TicketDTO update(TicketDTO ticket);
-    Boolean delete(int ticketId);
+    void delete(int ticketId);
 
 }

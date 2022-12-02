@@ -36,8 +36,8 @@ public class UserService {
         return userRepository.update(user);
     }
 
-    public  Boolean delete(int userId){
-        return userRepository.delete(userId);
+    public  void delete(int userId){
+         userRepository.delete(userId);
     }
 
 

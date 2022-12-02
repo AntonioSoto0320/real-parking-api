@@ -14,6 +14,6 @@ public interface IncidentRepository {
     Optional<IncidentDTO> getIncident(int incidentId);
     IncidentDTO save (IncidentDTO incident);
     IncidentDTO update(IncidentDTO incident);
-    Boolean delete(int incidentId);
+    void delete(int incidentId);
 
 }

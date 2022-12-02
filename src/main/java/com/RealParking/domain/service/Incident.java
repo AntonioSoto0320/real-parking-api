@@ -35,8 +35,8 @@ public class Incident {
         return incidentRepository.update(incident);
     }
 
-    public Boolean delete(int incidentId){
-        return incidentRepository.delete(incidentId);
+    public void delete(int incidentId){
+         incidentRepository.delete(incidentId);
     }
 
 }
