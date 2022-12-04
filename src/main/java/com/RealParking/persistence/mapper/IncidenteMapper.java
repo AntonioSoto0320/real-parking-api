@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface IncidenteMapper {
 
@@ -19,6 +21,8 @@ public interface IncidenteMapper {
             @Mapping(source = "fecha",target = "date"),
     })
     IncidentDTO toIncidentDTO(Incidente incidente);
+
+    List<IncidentDTO> toIncidentDTOs(List<Incidente> incidentes);
 
     @InheritInverseConfiguration
     Incidente toIncidente(IncidentDTO incidentDTO);

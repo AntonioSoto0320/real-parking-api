@@ -6,7 +6,11 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+@Component
 @Mapper(componentModel = "spring")
 public interface UsuarioMapper {
 
@@ -21,6 +25,8 @@ public interface UsuarioMapper {
 
     })
     UserDTO toUserDTO(Usuario usuario);
+
+    List<UserDTO> toUserDTOs(List<Usuario> usuarios);
 
     @InheritInverseConfiguration
     Usuario toUsuario(UserDTO userDTO);

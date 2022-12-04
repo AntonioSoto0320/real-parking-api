@@ -23,6 +23,14 @@ public class VoucherDTO {
         this.amount = amount;
     }
 
+    public int getIdVoucher() {
+        return idVoucher;
+    }
+
+    public void setIdVoucher(int idVoucher) {
+        this.idVoucher = idVoucher;
+    }
+
     public Ticket getTicket() {
         return ticket;
     }

@@ -1,11 +1,14 @@
 package com.RealParking.persistence.mapper;
 
+
 import com.RealParking.persistence.entity.Ticket;
 import com.RealParking.domain.dto.TicketDTO;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface TicketMapper {
@@ -19,6 +22,8 @@ public interface TicketMapper {
 
     })
     TicketDTO toTicketDTO(Ticket ticket);
+
+    List<TicketDTO> toTicketDTOs(List<Ticket> tickets);
 
     @InheritInverseConfiguration
     Ticket toTicket(TicketDTO ticketDTO);

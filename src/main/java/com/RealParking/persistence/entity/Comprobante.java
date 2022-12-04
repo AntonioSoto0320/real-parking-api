@@ -2,6 +2,7 @@ package com.RealParking.persistence.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "comprobante")
@@ -23,6 +24,7 @@ public class Comprobante {
     private LocalDate fecha;
 
     private double importe;
+
 
     public Comprobante() {
     }

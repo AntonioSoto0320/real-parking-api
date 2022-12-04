@@ -1,15 +1,14 @@
 package com.RealParking.persistence.mapper;
 
 import com.RealParking.domain.dto.RoleDTO;
-import com.RealParking.domain.dto.TicketDTO;
 import com.RealParking.persistence.entity.Rol;
-import com.RealParking.persistence.entity.Ticket;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-import javax.persistence.ManyToOne;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface RolMapper {
@@ -21,6 +20,8 @@ public interface RolMapper {
 
     })
     RoleDTO toRolDTO(Rol rol);
+
+    List<RoleDTO> toRolDTOs(List<Rol> roles);
 
     @InheritInverseConfiguration
     Rol toRol(RoleDTO roleDTO);

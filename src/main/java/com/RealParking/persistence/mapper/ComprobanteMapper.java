@@ -6,7 +6,12 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.Optional;
+
+@Component
 @Mapper(componentModel = "spring")
 public interface ComprobanteMapper {
 
@@ -19,6 +24,8 @@ public interface ComprobanteMapper {
 
     })
     VoucherDTO toVoucherDTO(Comprobante comprobante);
+
+    List<VoucherDTO>  toVoucherDTOs(List<Comprobante> comprobantes);
 
     @InheritInverseConfiguration
     Comprobante toComprobante(VoucherDTO voucherDTO);

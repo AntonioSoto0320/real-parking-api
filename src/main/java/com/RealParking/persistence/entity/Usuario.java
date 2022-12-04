@@ -1,10 +1,9 @@
 package com.RealParking.persistence.entity;
 
-import com.mysql.cj.jdbc.Blob;
+
 
 import javax.persistence.*;
-import java.util.Arrays;
-import java.util.List;
+
 
 
 @Entity
@@ -32,13 +31,13 @@ public class Usuario {
     @JoinColumn(name = "id_rol",insertable = false,updatable = false)
     private Rol rol;
 
-    @Lob
-    private byte[] foto;
+
+    private String foto;
 
     public Usuario() {
     }
 
-    public Usuario(String usuario, String contraseña, String nombreCompleto, String estado, Rol rol, byte[] foto) {
+    public Usuario(String usuario, String contraseña, String nombreCompleto, String estado, Rol rol, String foto) {
         this.usuario = usuario;
         this.contraseña = contraseña;
         this.nombreCompleto = nombreCompleto;
@@ -95,11 +94,11 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public byte[] getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(byte[] foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 
@@ -112,7 +111,7 @@ public class Usuario {
                 ", nombreCompleto='" + nombreCompleto + '\'' +
                 ", estado='" + estado + '\'' +
                 ", rol=" + rol +
-                ", foto=" + Arrays.toString(foto) +
+                ", foto='" + foto + '\'' +
                 '}';
     }
 }

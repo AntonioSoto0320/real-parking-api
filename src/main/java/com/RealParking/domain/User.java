@@ -10,12 +10,12 @@ public class User {
     private String fullName;
     private String stateUser;
     private Role rol;
-    private Blob photo;
+    private String photo;
 
     public User() {
     }
 
-    public User(String user, String password, String fullName, String stateUser, Role rol, Blob photo) {
+    public User(String user, String password, String fullName, String stateUser, Role rol, String photo) {
         this.user = user;
         this.password = password;
         this.fullName = fullName;
@@ -72,11 +72,11 @@ public class User {
         this.rol = rol;
     }
 
-    public Blob getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Blob photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
@@ -89,7 +89,7 @@ public class User {
                 ", fullName='" + fullName + '\'' +
                 ", stateUser='" + stateUser + '\'' +
                 ", rol=" + rol +
-                ", photo=" + photo +
+                ", photo='" + photo + '\'' +
                 '}';
     }
 }

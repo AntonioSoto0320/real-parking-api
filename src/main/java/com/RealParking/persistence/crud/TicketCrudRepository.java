@@ -1,7 +1,13 @@
 package com.RealParking.persistence.crud;
 
-import com.RealParking.domain.dto.TicketDTO;
+
+
+import com.RealParking.persistence.entity.Ticket;
 import org.springframework.data.repository.CrudRepository;
 
-public interface TicketCrudRepository extends CrudRepository<TicketDTO,Integer> {
+import java.util.List;
+
+public interface TicketCrudRepository extends CrudRepository<Ticket,Integer> {
+
+    public List<Ticket> findByIdTicket(int idTicket);
 }

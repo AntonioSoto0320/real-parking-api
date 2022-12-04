@@ -12,12 +12,12 @@ public class UserDTO {
     private String fullName;
     private String stateUser;
     private Role role;
-    private Blob photo;
+    private String photo;
 
     public UserDTO() {
     }
 
-    public UserDTO(String user, String password, String fullName, String stateUser, Role role, Blob photo) {
+    public UserDTO(String user, String password, String fullName, String stateUser, Role role, String photo) {
         this.user = user;
         this.password = password;
         this.fullName = fullName;
@@ -74,11 +74,11 @@ public class UserDTO {
         this.role = role;
     }
 
-    public Blob getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Blob photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
@@ -91,7 +91,7 @@ public class UserDTO {
                 ", fullName='" + fullName + '\'' +
                 ", stateUser='" + stateUser + '\'' +
                 ", role=" + role +
-                ", photo=" + photo +
+                ", photo='" + photo + '\'' +
                 '}';
     }
 }
